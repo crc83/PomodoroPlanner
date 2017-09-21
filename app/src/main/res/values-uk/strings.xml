@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Планувальник</string>
+    <string name="all_task_list">Список всіх задач</string>
+    <string name="add_repository">Додати репозиторій</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="title_activity_all_tasks_list">Список всіх задач</string>
+    <string name="navigation_drawer_close">хххххх</string>
+    <string name="navigation_drawer_open">хххххх</string>
+</resources>

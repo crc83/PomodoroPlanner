@@ -6,5 +6,6 @@
 
     <string name="action_settings">Settings</string>
     <string name="all_task_list">List of all tasks</string>
-    <string name="title_activity_all_tasks_list">AllTasksListActivity</string>
+    <string name="add_repository">List of all tasks</string>
+    <string name="title_activity_all_tasks_list">List of all tasks</string>
 </resources>

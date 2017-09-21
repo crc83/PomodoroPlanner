@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.itemId
         when (item.itemId) {
             R.id.nav_all_task_list  -> launchActivity<AllTasksListActivity>();
-            
+
         }
 //
 //        if (id == R.id.nav_all_task_list) {
