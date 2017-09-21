@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
+import android.widget.CheckedTextView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.content_all_tasks_list.*
 
@@ -73,15 +74,18 @@ private class ListExampleAdapter(context: Context) : BaseAdapter() {
             vh = view.tag as ListRowHolder
         }
 
-        vh.label?.text = sList[position]
+        vh.title?.text = sList[position]
+        vh.description?.text = "Lorem ipsum sit"
         return view
     }
 }
 
 private class ListRowHolder(row: View?) {
-    public val label: TextView?
+    public val title: CheckedTextView?
+    public val description: TextView?
 
     init {
-        this.label = row?.findViewById<TextView>(R.id.label)
+        this.title = row?.findViewById<CheckedTextView>(R.id.task_title)
+        this.description = row?.findViewById<TextView>(R.id.short_description)
     }
 }
