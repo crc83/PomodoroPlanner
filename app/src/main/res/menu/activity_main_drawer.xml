@@ -10,7 +10,6 @@
             android:title="@string/all_task_list" />
         <item
             android:id="@+id/nav_add_repository"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/add_repository" />
         <item
             android:id="@+id/nav_slideshow"

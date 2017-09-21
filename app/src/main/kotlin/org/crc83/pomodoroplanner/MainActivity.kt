@@ -73,22 +73,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.itemId
         when (item.itemId) {
             R.id.nav_all_task_list  -> launchActivity<AllTasksListActivity>();
-
+//            R.id.nav_add_repository ->
         }
-//
-//        if (id == R.id.nav_all_task_list) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
