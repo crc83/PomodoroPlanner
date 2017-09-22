@@ -7,4 +7,6 @@
     <string name="title_activity_all_tasks_list">Список всіх задач</string>
     <string name="navigation_drawer_close">хххххх</string>
     <string name="navigation_drawer_open">хххххх</string>
+    <string name="repos">Список репозиторіїв</string>
+    <string name="title_activity_repos">Репозиторії задач</string>
 </resources>

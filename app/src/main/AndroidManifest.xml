@@ -22,7 +22,16 @@
         <activity
             android:name=".ui.tasks.AllTasksListActivity"
             android:label="@string/title_activity_all_tasks_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.repos.ReposActivity"
+            android:label="@string/title_activity_repos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.crc83.pomodoroplanner.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

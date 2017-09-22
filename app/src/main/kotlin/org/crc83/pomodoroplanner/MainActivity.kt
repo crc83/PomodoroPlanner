@@ -11,9 +11,9 @@ import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import android.content.Intent
+import org.crc83.pomodoroplanner.ui.repos.ReposActivity
 import org.crc83.pomodoroplanner.ui.tasks.AllTasksListActivity
-import org.crc83.pomodoroplanner.utils.launchActivity
+import org.jetbrains.anko.startActivity
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -72,7 +72,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         val id = item.itemId
         when (item.itemId) {
-            R.id.nav_all_task_list  -> launchActivity<AllTasksListActivity>();
+            R.id.nav_all_task_list  -> startActivity<AllTasksListActivity>();
+            R.id.nav_repos          -> startActivity<ReposActivity>();
 //            R.id.nav_add_repository ->
         }
         drawer_layout.closeDrawer(GravityCompat.START)

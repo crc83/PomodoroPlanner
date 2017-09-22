@@ -9,6 +9,9 @@
             app:showAsAction="always"
             android:title="@string/all_task_list" />
         <item
+            android:id="@+id/nav_repos"
+            android:title="@string/repos" />
+        <item
             android:id="@+id/nav_add_repository"
             android:title="@string/add_repository" />
         <item

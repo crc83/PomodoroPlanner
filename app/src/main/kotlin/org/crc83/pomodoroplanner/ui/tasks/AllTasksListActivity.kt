@@ -25,17 +25,12 @@ class AllTasksListActivity : AppCompatActivity() {
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
+        all_tasks_list.adapter = ListExampleAdapter(context = this)
+
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
-            var items = ArrayList<String>().apply {
-                add("foo1")
-                add("foo2")
-                add("foo3")
-                add("foo4")
-            }
-            all_tasks_list.adapter = ListExampleAdapter(context = this)
         }
-
+		supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
     }
 
