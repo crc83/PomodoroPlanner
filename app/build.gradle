@@ -11,7 +11,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -21,6 +21,7 @@ android {
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
     }
 }
 
@@ -30,22 +31,23 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    //https://github.com/mikepenz/Android-Iconics
-    //License: Apache 2.0
-//    compile 'com.mikepenz:iconics-core:2.9.3@aar'
-//    compile 'com.mikepenz:google-material-typeface:3.0.1.1.original@aar'
-
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.google.code.gson:gson:2.8.2'
     compile "org.jetbrains.anko:anko-commons:$anko_version"
-    compile 'org.jetbrains.exposed:exposed:0.8.6'
+    //compile 'org.jetbrains.exposed:exposed:0.8.6'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
+    testCompile 'org.junit.platform:junit-platform-launcher:1.0.0'
+    //testCompile "org.jetbrains.spek:spek-api:$spek_version"
+
+
 }
+
 repositories {
     mavenCentral()
-    maven {
-        url "https://dl.bintray.com/kotlin/exposed"
-    }
 }
