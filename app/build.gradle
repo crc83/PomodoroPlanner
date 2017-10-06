@@ -1,3 +1,10 @@
+ext.junit4Version        = '4.12'
+ext.junitVintageVersion  = '4.12.1'
+ext.junitPlatformVersion = '1.0.1'
+ext.junitJupiterVersion  = '5.0.1'
+ext.log4jVersion = '2.9.0'
+
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -11,7 +18,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -33,19 +40,14 @@ dependencies {
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.google.code.gson:gson:2.8.2'
+
     compile "org.jetbrains.anko:anko-commons:$anko_version"
     //compile 'org.jetbrains.exposed:exposed:0.8.6'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
-    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
-    testCompile 'org.junit.platform:junit-platform-launcher:1.0.0'
+
     //testCompile "org.jetbrains.spek:spek-api:$spek_version"
-
-
 }
 
 repositories {

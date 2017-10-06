@@ -1,4 +1,4 @@
-package org.crc83.pomodoroplanner.api
+package org.crc83.pomodoroplanner.core
 
 /**
  * Created by Sergiy Beley on 9/16/2017.
