@@ -39,18 +39,18 @@ class MyDatabaseOpenHelperTest {
         // When
         var result:Array<String> = emptyArray()
         RuntimeEnvironment.application.database.use {
-            insert("Person",
-                    "_id" to 1,
+            insert("Test",
+                    "id" to 1,
                     "name" to "John",
-                    "surname" to "Smith",
-                    "age" to 20)
-            select("Person").exec { result = columnNames }
+                    "photo" to "Smith")
+            select("Test").exec { result = columnNames }
         }
-//        dbHelper.insertText(testStr1)
-//        dbHelper.insertText(testStr2)
-        System.out.println(result)
+        result.forEach { o->
+            System.out.println(o)
+        }
+
         // Then
-        assertEquals(result[0], "_id")
+        assertEquals(result[0], "id")
     }
 
     @After

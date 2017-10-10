@@ -19,15 +19,15 @@ class MyDatabaseOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "MyDatab
 
     override fun onCreate(db: SQLiteDatabase) {
         // Here you create tables
-        db.createTable("Customer", true,
+        db.createTable("Test", true,
                 "id" to INTEGER + PRIMARY_KEY + UNIQUE,
                 "name" to TEXT,
-                "photo" to BLOB)
+                "photo" to TEXT)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         // Here you can upgrade tables, as usual
-        db.dropTable("User", true)
+        db.dropTable("Test2", true)
     }
 }
 
