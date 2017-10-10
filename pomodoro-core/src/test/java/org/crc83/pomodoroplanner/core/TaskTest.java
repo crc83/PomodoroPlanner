@@ -19,10 +19,7 @@ public class TaskTest {
     @DisplayName("should be serializable to json")
     void testTaskIsSerializable() {
         Task task = new Task("42", "First task", "Lorem ipsum sind", false);
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(task);
-        System.out.println(task);
-        System.out.println(json);
+        String json = task.toJson();
         assertAll("JSon contains important fields", () -> {
             assertNotNull(json);
             assertTrue(json.contains("\"id\": \"42\""));

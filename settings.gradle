@@ -1,1 +1,1 @@
-include ':app', ':pomodoro-core'
+include ':pomodoro-app', ':pomodoro-core'

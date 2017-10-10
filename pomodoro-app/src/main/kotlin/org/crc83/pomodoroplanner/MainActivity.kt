@@ -11,6 +11,7 @@ import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.crc83.pomodoroplanner.db.database
 import org.crc83.pomodoroplanner.ui.repos.ReposActivity
 import org.crc83.pomodoroplanner.ui.tasks.AllTasksListActivity
 import org.jetbrains.anko.startActivity

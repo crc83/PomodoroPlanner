@@ -29,6 +29,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile 'com.google.code.gson:gson:2.8.2'
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
     testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
     // JUnit Jupiter API and TestEngine implementation
     testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
