@@ -1,8 +1,5 @@
 package org.crc83.pomodoroplanner.db
 
-import android.os.Build.VERSION_CODES.KITKAT
-import android.os.Build.VERSION_CODES.LOLLIPOP
-import org.crc83.pomodoroplanner.BuildConfig
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 import org.junit.After
@@ -19,13 +16,12 @@ import org.robolectric.annotation.Config
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(manifest=Config.NONE)
-class MyDatabaseOpenHelperTest {
-    lateinit var dbHelper: MyDatabaseOpenHelper // Your DbHelper class
+class DbOpenHelperTest {
+    lateinit var dbHelper: DbOpenHelper // Your DbHelper class
 
     @Before
     fun setup() {
-        dbHelper = MyDatabaseOpenHelper(RuntimeEnvironment.application)
-//        dbHelper.clearDbAndRecreate() // This is just to clear the db
+        dbHelper = DbOpenHelper(RuntimeEnvironment.application)
     }
 
     @Test
@@ -33,16 +29,13 @@ class MyDatabaseOpenHelperTest {
     fun testDbInsertion() {
 
         // Given
-        val testStr1 = "testing"
-        val testStr2 = "testing"
-
-        // When
         var result:Array<String> = emptyArray()
         RuntimeEnvironment.application.database.use {
             insert("Test",
                     "id" to 1,
                     "name" to "John",
                     "photo" to "Smith")
+            //When
             select("Test").exec { result = columnNames }
         }
         result.forEach { o->
@@ -55,7 +48,7 @@ class MyDatabaseOpenHelperTest {
 
     @After
     fun tearDown() {
-//        dbHelper.clearDb()
+        //nothing
     }
 
 
