@@ -6,7 +6,7 @@ import com.google.gson.GsonBuilder
  * Created by Sergiy Beley on 9/16/2017.
  */
 data class Task(
-    var id : String = "",
+    var id : Long,
     var name : String="",
     var description : String ="",
     var priority : Int = 0,

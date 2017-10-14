@@ -31,10 +31,10 @@ class TaskReadWriteTest {
     fun testDbInsertion() {
 
         // Given
-        var result:Array<String> = emptyArray()
+        var result:List<Task> = emptyList()
         RuntimeEnvironment.application.database.use {
             val task : Task = Task(
-                    id = "0",
+                    id = 1,
                     name = "test task",
                     description = "lorem ipsum",
                     state = 0,
@@ -50,14 +50,14 @@ class TaskReadWriteTest {
                     )
             //When
             val taskParser = classParser<Task>()
-            select("Tasks").parseList(taskParser)
+            result = select("Tasks").parseList(taskParser)
         }
         result.forEach { o->
             System.out.println(o)
         }
 
         // Then
-        assertEquals(result[1], "test task")
+        assertEquals(result.get(0).name, "test task")
     }
 
     @After

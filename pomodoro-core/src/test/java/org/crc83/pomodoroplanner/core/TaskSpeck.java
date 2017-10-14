@@ -11,16 +11,16 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 @Db
-public class TaskTest {
+public class TaskSpeck {
 
     @Test
     @DisplayName("should be serializable to json")
     void testTaskIsSerializable() {
-        Task task = new Task("42", "First task", "Lorem ipsum sind", 0, 0, "");
+        Task task = new Task(42, "First task", "Lorem ipsum sind", 0, 0, "");
         String json = task.toJson();
         assertAll("JSon contains important fields", () -> {
             assertNotNull(json);
-            assertTrue(json.contains("\"id\": \"42\""));
+            assertTrue(json.contains("\"id\": 42"));
             assertTrue(json.contains("\"name\": \"First task\""));
             assertTrue(json.contains("\"description\": \"Lorem ipsum sind\""));
         });
