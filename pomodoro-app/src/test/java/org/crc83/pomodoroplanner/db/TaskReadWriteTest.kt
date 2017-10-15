@@ -40,17 +40,9 @@ class TaskReadWriteTest {
                     state = 0,
                     priority = 0,
                     metadata = "")
-            insert("Tasks",
-                    "id" to task.id,
-                    "name" to task.name,
-                    "description" to task.description,
-                    "state" to task.state,
-                    "priority" to task.priority,
-                    "metadata" to task.metadata
-                    )
+            insertTask(task)
             //When
-            val taskParser = classParser<Task>()
-            result = select("Tasks").parseList(taskParser)
+            result = readAllTasks()
         }
         result.forEach { o->
             System.out.println(o)

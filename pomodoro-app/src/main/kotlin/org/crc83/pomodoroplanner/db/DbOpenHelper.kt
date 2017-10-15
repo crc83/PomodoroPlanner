@@ -25,13 +25,7 @@ class DbOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "pomodoro-planne
                 "photo" to TEXT)
 
         //table with tasks V1
-        db.createTable("tasks", true,
-                "id" to INTEGER + PRIMARY_KEY + UNIQUE,
-                "name" to TEXT,
-                "description" to TEXT,
-                "priority" to INTEGER,
-                "state" to INTEGER,
-                "metadata" to TEXT)
+        db.createTasksTable()
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
