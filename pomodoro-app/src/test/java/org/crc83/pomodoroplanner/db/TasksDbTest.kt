@@ -18,7 +18,7 @@ import org.robolectric.annotation.Config
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(manifest=Config.NONE)
-class TaskReadWriteTest {
+class TasksDbTest {
     lateinit var dbHelper: DbOpenHelper // Your DbHelper class
 
     @Before

@@ -1,6 +1,6 @@
 package org.crc83.pomodoroplanner.core;
 
-import org.crc83.pomodoroplanner.junit.Db;
+import org.crc83.pomodoroplanner.junit.Api;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created by sbelei on 10/4/2017.
  */
 
-@Db
+@Api
 public class TaskSpeck {
 
     @Test
