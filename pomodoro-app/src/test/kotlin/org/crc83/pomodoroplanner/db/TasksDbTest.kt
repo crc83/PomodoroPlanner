@@ -44,10 +44,6 @@ class TasksDbTest {
             //When
             result = readAllTasks()
         }
-        result.forEach { o->
-            System.out.println(o)
-        }
-
         // Then
         assertEquals(result.get(0).name, "test task")
     }

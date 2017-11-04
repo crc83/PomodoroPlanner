@@ -38,12 +38,11 @@ class DbOpenHelperTest {
             //When
             select("Test").exec { result = columnNames }
         }
-        result.forEach { o->
-            System.out.println(o)
-        }
 
         // Then
         assertEquals(result[0], "id")
+        assertEquals(result[1], "name")
+        assertEquals(result[2], "photo")
     }
 
     @After
