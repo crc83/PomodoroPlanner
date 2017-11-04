@@ -19,6 +19,17 @@ targetCompatibility = "1.8"
 junitPlatform {
     platformVersion "${junitPlatformVersion}"
     logManager 'org.apache.logging.log4j.jul.LogManager'
+	filters {
+		engines {
+			include 'junit-jupiter', 'junit-vintage'
+			// exclude 'custom-engine'
+		}
+		tags {
+			include 'api'
+			// exclude 'slow'
+		}
+		includeClassNamePattern '.*Speck'
+	}
 }
 
 repositories {
