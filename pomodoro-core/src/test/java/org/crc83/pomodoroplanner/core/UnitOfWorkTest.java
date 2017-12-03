@@ -1,7 +1,7 @@
-package org.crc83.pomodoroplanner.core
+package org.crc83.pomodoroplanner.core;
 
 import org.crc83.pomodoroplanner.junit.Api;
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
