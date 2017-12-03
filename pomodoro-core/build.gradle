@@ -6,18 +6,11 @@ apply plugin: 'org.junit.platform.gradle.plugin'
 //    main.java.srcDirs += 'src/main/kotlin'
 //    test.java.srcDirs += 'src/test/kotlin'
 //}
-
-ext.junit4Version        = '4.12'
-ext.junitVintageVersion  = '4.12.1'
-ext.junitPlatformVersion = '1.0.1'
-ext.junitJupiterVersion  = '5.0.1'
-ext.log4jVersion = '2.9.0'
-
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
 
 junitPlatform {
-    platformVersion "${junitPlatformVersion}"
+    platformVersion "${junitPlatform}"
     logManager 'org.apache.logging.log4j.jul.LogManager'
 	filters {
 		engines {
@@ -37,25 +30,26 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin"
     compile 'com.google.code.gson:gson:2.8.2'
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin"
+    compile "org.jetbrains.anko:anko-sqlite:$anko"
+    
+    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin"
     // JUnit Jupiter API and TestEngine implementation
-    testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
-    testRuntime("org.junit.vintage:junit-vintage-engine:${junitVintageVersion}")
+    testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiter")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiter")
+    testRuntime("org.junit.vintage:junit-vintage-engine:$junitVintage")
 
     // To avoid compiler warnings about @API annotations in JUnit code
     testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
 
     // To use Log4J's LogManager
-    testRuntime("org.apache.logging.log4j:log4j-core:${log4jVersion}")
-    testRuntime("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
+    testRuntime("org.apache.logging.log4j:log4j-core:$log4j")
+    testRuntime("org.apache.logging.log4j:log4j-jul:$log4j")
 
     // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
-    testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+    testRuntime("org.junit.platform:junit-platform-launcher:$junitPlatform")
 }
 
 test {

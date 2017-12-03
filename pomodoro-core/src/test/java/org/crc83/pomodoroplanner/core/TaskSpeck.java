@@ -19,6 +19,7 @@ public class TaskSpeck {
     void testTaskIsSerializable() {
         Task task = new Task(42, "First task", "Lorem ipsum sind", 0, 0, "");
         String json = task.toJson();
+        System.out.println("JSON:"+json);
         assertAll("JSon contains important fields", 
         		() -> assertNotNull(json),
         		() -> assertTrue(json.contains("\"name\": \"First task\""), "Name is wrong"),

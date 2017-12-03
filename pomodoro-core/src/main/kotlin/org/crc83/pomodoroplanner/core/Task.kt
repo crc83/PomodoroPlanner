@@ -11,10 +11,4 @@ data class Task(
     var description : String ="",
     var priority : Int = 0,
     var state : Int = 0,
-    var metadata : String) {
-
-    fun toJson(): String {
-        val gson = GsonBuilder().setPrettyPrinting().create()
-        return gson.toJson(this)
-    }
-}
+    var metadata : String) : JsonObject()

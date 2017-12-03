@@ -8,5 +8,4 @@ data class UnitOfWork (
         val taskId: Long,
         val originallyPlanned: Int,
         val planned: Int,
-        val log: String
-)
+        val log: String) : JsonObject()
